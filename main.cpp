@@ -9,11 +9,23 @@ int main() {
     int b = 234;
 
     int addition = mathfuncs::simplemathfuncs::add(a,b);
+
+    int subtraction = mathfuncs::simplemathfuncs::subtract(a,b);
+
+    int multiplication = mathfuncs::simplemathfuncs::multiply(a,b);
+
+    int division = mathfuncs::simplemathfuncs::divide(a,b);
     
     printf("a + b = %d\n", addition);
+    
+    printf("a - b = %d\n",subtraction);
 
-printf("WTF are you looking at?\n");
-printf("You asked for an example - here it is.\n");
+    printf("a * b = %d\n", multiplication);
+
+    printf("a / b = %d\n", division);
+
+
+printf("An example program using a lib with math functions.\n");
 return 0;
 
 }
