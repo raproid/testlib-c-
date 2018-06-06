@@ -41,7 +41,7 @@ gcc -static main.o -L. -lmathfuncsstat -o resultstatic
 #compile the program 
 gcc -c main.cpp
 #compile the library
-gcc -fPIC mathfuncs.cpp
+gcc -fPIC -c mathfuncs.cpp
 #create a dynamic version of the library
 gcc -shared -o libmathfuncsdyn.so mathfuncs.o
 #add the library to the program 
