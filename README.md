@@ -16,7 +16,7 @@ gcc main.o mathfuncs.o -o result
 ./result
 ```
 
-###Compile and link a static library
+### Compile and link a static library
 
 ``` bash
 #compile 
@@ -35,7 +35,7 @@ gcc -static main.o -L. -lmathfuncsstat -o resultstatic
 ```
 
 
-###Compile and link a dynamic library
+### Compile and link a dynamic library
 
 ``` bash
 #compile the program 
