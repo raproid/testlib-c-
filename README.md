@@ -69,4 +69,5 @@ export LD_LIBRARY_PATH
 
 ### Dynamic lib
 ``` make -f makefiledynamic```\
+\
 Tip: change path to the cloned repo in first command (see "To use the dynamic library in Linux..." section).
