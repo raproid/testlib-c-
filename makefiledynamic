@@ -1,6 +1,7 @@
 # add the local path to the environment path (see next section)
-	LD_LIBRARY_PATH=/home/username/projects/testlib-cpp:${LD_LIBRARY_PATH}
-	export LD_LIBRARY_PATH
+addvar: resultdynamic
+	echo LD_LIBRARY_PATH=/home/username/projects/testlib-cpp:${LD_LIBRARY_PATH}
+	echo export LD_LIBRARY_PATH
 # add lib to the program
 resultdynamic: main.o libmathfuncsdyn.so
 	gcc main.o -L. -lmathfuncsdyn -o resultdynamic
@@ -11,5 +12,5 @@ libmathfuncsdyn.so: mathfuncs.o
 mathfuncs.o: mathfuncs.cpp
 	gcc -fPIC -c mathfuncs.cpp
 #compile the program 
-.PHONY: main.o
+.PHONY: 
 	gcc -c main.cpp	
