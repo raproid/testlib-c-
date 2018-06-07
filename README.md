@@ -15,7 +15,7 @@ gcc main.o mathfuncs.o -o result
 #run
 ./result
 ```
-a
+
 ### Compile and link a static library
 
 ``` bash
@@ -68,5 +68,5 @@ export LD_LIBRARY_PATH
 ``` make -f makefilestatic```
 
 ### Dynamic lib
-``` make -f makefiledynamic```
+``` make -f makefiledynamic```\
 Tip: change path to the cloned repo in first command (see "To use the dynamic library in Linux..." section).
