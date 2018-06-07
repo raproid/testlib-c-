@@ -15,7 +15,7 @@ gcc main.o mathfuncs.o -o result
 #run
 ./result
 ```
-
+a
 ### Compile and link a static library
 
 ``` bash
