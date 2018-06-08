@@ -5,7 +5,7 @@ Tested on Ubuntu 17.10 and 18.04.
 
 ## Build
 
-### Compile and bind
+### Compile, assemble and run
 
 ``` bash
 #compile
@@ -16,7 +16,7 @@ gcc main.o mathfuncs.o -o result
 ./result
 ```
 
-### Compile and link a static library
+### Compile, link a static library and run
 
 ``` bash
 #compile 
@@ -33,7 +33,7 @@ gcc -static main.o -L. -lmathfuncsstat -o static
 ./static
 ```
 
-### Compile and link a dynamic library
+### Compile, link a dynamic library nd run
 
 ``` bash
 #compile the program 
@@ -49,7 +49,7 @@ gcc main.o -L. -lmathfuncsdyn -o tdynamic
 ./dynamic
 ```
 
-## To use the dynamic library in Linux, add the local path to the cloned repo to the environment var:
+## To use the dynamic library in Linux, you can add the local path to the cloned repo to the environment var:
 
 ``` bash 
 LD_LIBRARY_PATH=/path-to-the-cloned-repo:${LD_LIBRARY_PATH}
@@ -78,5 +78,5 @@ make install
 Tip: don't forget to uninstall the lib after testing via ```make uninstall```.
 
 
-### Clean old files
+### Clean old compilation
 ```make clean```
