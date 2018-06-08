@@ -26,14 +26,12 @@ ar rc libmathfuncsstat.a mathfuncs.o
 #add index
 ranlib libmathfuncsstat.a
 #add the library to the program
-gcc main.o -L. -lmathfuncsstat -o resultstatic
-#in case you already created a dynamic library
-gcc -static main.o -L. -lmathfuncsstat -o resultstatic
+gcc main.o -L. -lmathfuncsstat -o static
+#or in case you already created a dynamic library
+gcc -static main.o -L. -lmathfuncsstat -o static
 #run
-./resultstatic
-
+./static
 ```
-
 
 ### Compile and link a dynamic library
 
@@ -45,10 +43,10 @@ gcc -fPIC -c mathfuncs.cpp
 #create a dynamic version of the library
 gcc -shared -o libmathfuncsdyn.so mathfuncs.o
 #add the library to the program 
-gcc main.o -L. -lmathfuncsdyn -o resultdynamic
+gcc main.o -L. -lmathfuncsdyn -o tdynamic
 # add the local path to the environment path (see next section)
 #run
-./resultdynamic
+./dynamic
 ```
 
 ## To use the dynamic library in Linux, add the local path to the cloned repo to the environment var:
@@ -65,17 +63,20 @@ export LD_LIBRARY_PATH
 ## Use makefiles for process automation
 
 ### Static lib
-``` make -f makefilestatic```
+``` bash 
+make static
+./static
+```
 
 ### Dynamic lib
-``` make -f makefiledynamic```\
+``` bash
+make dynamic
+make install
+./dynamic
+```
 \
-Tip: change path to the cloned repo in first command (see "To use the dynamic library in Linux..." section).
+Tip: don't forget to uninstall the lib after testing via ```make uninstall```.
+
 
 ### Clean old files
-```make -f makefilestatic clean```\
-\ 
-or 
-\
-```make -f makefiledynamic clean```
-
+```make clean```
