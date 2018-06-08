@@ -71,3 +71,11 @@ export LD_LIBRARY_PATH
 ``` make -f makefiledynamic```\
 \
 Tip: change path to the cloned repo in first command (see "To use the dynamic library in Linux..." section).
+
+### Clean old files
+```make -f makefilestatic clean```\
+\ 
+or 
+\
+```make -f makefiledynamic clean```
+
