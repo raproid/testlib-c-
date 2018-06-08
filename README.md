@@ -60,7 +60,7 @@ e.g.
 LD_LIBRARY_PATH=/home/username/projects/testlib-cpp:${LD_LIBRARY_PATH}
 export LD_LIBRARY_PATH
 ```
-## Use makefiles for process automation
+## Use the makefile for process automation
 
 ### Static lib
 ``` bash 
