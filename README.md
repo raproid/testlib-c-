@@ -65,7 +65,7 @@ gcc -fPIC -c mathfuncs.cpp
 #create a dynamic version of the library
 gcc -shared -o libmathfuncsdyn.so mathfuncs.o
 #add the library to the program 
-gcc main.o -L. -lmathfuncsdyn -o tdynamic
+gcc main.o -L. -lmathfuncsdyn -o dynamic
 # add the local path to the environment path (see next section)
 #run
 ./dynamic
