@@ -5,7 +5,7 @@ Tested on Ubuntu 17.10 and 18.04.
 
 ## Build
 
-## Use the makefile for process automation
+## Use the Makefile for process automation
 
 ### Static lib
 ``` bash 
