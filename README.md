@@ -5,7 +5,29 @@ Tested on Ubuntu 17.10 and 18.04.
 
 ## Build
 
-### Compile, assemble and run
+## Use the makefile for process automation
+
+### Static lib
+``` bash 
+make static
+./static
+```
+
+### Dynamic lib
+``` bash
+make dynamic
+make install
+./dynamic
+```
+\
+Tip: don't forget to uninstall the lib after testing via ```make uninstall```.
+
+### Clean old compilation
+```make clean```
+
+<br> 
+
+### Alternatively, compile, assemble and run
 
 ``` bash
 #compile
@@ -16,7 +38,7 @@ gcc main.o mathfuncs.o -o result
 ./result
 ```
 
-### Compile, link a static library and run
+### Or compile, link a static library and run
 
 ``` bash
 #compile 
@@ -33,7 +55,7 @@ gcc -static main.o -L. -lmathfuncsstat -o static
 ./static
 ```
 
-### Compile, link a dynamic library nd run
+### Or compile, link a dynamic library and run
 
 ``` bash
 #compile the program 
@@ -60,23 +82,4 @@ e.g.
 LD_LIBRARY_PATH=/home/username/projects/testlib-cpp:${LD_LIBRARY_PATH}
 export LD_LIBRARY_PATH
 ```
-## Use the makefile for process automation
-
-### Static lib
-``` bash 
-make static
-./static
-```
-
-### Dynamic lib
-``` bash
-make dynamic
-make install
-./dynamic
-```
-\
-Tip: don't forget to uninstall the lib after testing via ```make uninstall```.
-
-
-### Clean old compilation
-```make clean```
+Tip: this fixed in the Makefil via `make install`
