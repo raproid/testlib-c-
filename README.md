@@ -1,5 +1,5 @@
 # testlib-cpp
-Simple program using a static and dynamic library with math functions 
+Simple program using a static and dynamic library (for Linux) with math functions 
 
 Tested on Ubuntu 17.10 and 18.04.
 
