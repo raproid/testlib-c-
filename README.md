@@ -82,4 +82,4 @@ e.g.
 LD_LIBRARY_PATH=/home/username/projects/testlib-cpp:${LD_LIBRARY_PATH}
 export LD_LIBRARY_PATH
 ```
-Tip: this fixed in the Makefil via `make install`
+Tip: workaround is `make install` via the Makefile 
